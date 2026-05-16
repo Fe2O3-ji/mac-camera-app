@@ -12,5 +12,6 @@ targets:
     settings:
       INFOPLIST_FILE: Sources/Mac拍照软件/Info.plist
       PRODUCT_BUNDLE_IDENTIFIER: com.example.mac-photos
+      ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
       MARKETING_VERSION: "1.0"
       CURRENT_PROJECT_VERSION: 1

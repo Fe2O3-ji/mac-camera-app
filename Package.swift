@@ -11,6 +11,10 @@ let package = Package(
         .executableTarget(
             name: "Mac拍照软件",
             path: "Sources/Mac拍照软件",
+            resources: [
+                .process("Assets.xcassets"),
+                .process("Info.plist")
+            ],
             linkerSettings: [
                 .linkedFramework("AVFoundation"),
                 .linkedFramework("AppKit"),
