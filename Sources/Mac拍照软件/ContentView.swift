@@ -67,13 +67,20 @@ struct ContentView: View {
             if cameraManager.authorizationStatus == .denied {
                 Text("需要摄像头权限")
                     .font(.title2.weight(.medium))
-                Text("请在系统设置中允许此应用访问摄像头")
+                Text("请在弹窗中允许，或在系统设置中手动授权")
                     .foregroundStyle(.secondary)
-                Button("打开系统设置") {
-                    NSWorkspace.shared.open(URL(string: "x-apple.systempreferences:com.apple.preference.security?Privacy_Camera")!)
+                HStack(spacing: 12) {
+                    Button("重试授权") {
+                        cameraManager.requestAuthorization()
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .controlSize(.large)
+                    Button("系统设置") {
+                        NSWorkspace.shared.open(URL(string: "x-apple.systempreferences:com.apple.preference.security?Privacy_Camera")!)
+                    }
+                    .buttonStyle(.bordered)
+                    .controlSize(.large)
                 }
-                .buttonStyle(.borderedProminent)
-                .controlSize(.large)
             } else if cameraManager.authorizationStatus == .notDetermined {
                 Text("需要摄像头权限")
                     .font(.title2.weight(.medium))
@@ -92,8 +99,7 @@ struct ContentView: View {
     private func checkAndSetupCamera() {
         switch cameraManager.authorizationStatus {
         case .authorized: cameraManager.setupSession()
-        case .notDetermined: cameraManager.requestAuthorization()
-        default: break
+        default: cameraManager.requestAuthorization()
         }
     }
 
