@@ -1,0 +1,16 @@
+name: Mac拍照软件
+options:
+  bundleIdPrefix: com.example
+  deploymentTarget:
+    macOS: "14.0"
+targets:
+  Mac拍照软件:
+    type: application
+    platform: macOS
+    sources:
+      - Sources/Mac拍照软件
+    settings:
+      INFOPLIST_FILE: Sources/Mac拍照软件/Info.plist
+      PRODUCT_BUNDLE_IDENTIFIER: com.example.mac-photos
+      MARKETING_VERSION: "1.0"
+      CURRENT_PROJECT_VERSION: 1

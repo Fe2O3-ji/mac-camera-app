@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl *)",
+      "Read(//Users/chg3/.claude/**)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:api.github.com)",
+      "Bash(python3 -c \"import json,sys; data=json.load\\(sys.stdin\\); [print\\(f'{d[\\\\\"type\\\\\"]:4s} {d[\\\\\"name\\\\\"]}'\\) for d in data]\")",
+      "Bash(mkdir -p \"/Users/chg3/.claude/skills/find-skills\")",
+      "Bash(echo \"Exit: $?\")",
+      "Bash(npm install *)",
+      "Bash(python3 -c \"import json,sys; data=json.load\\(sys.stdin\\); [print\\(f'  {d[\\\\\"type\\\\\"]:4s} {d[\\\\\"name\\\\\"]}'\\) for d in data]\")",
+      "Bash(cp -r /tmp/opencli-skills/skills/__TRACKED_VAR__ /Users/chg3/.claude/skills/__TRACKED_VAR__)",
+      "Bash(rm -rf /tmp/opencli-skills)",
+      "Bash(opencli --version)"
+    ]
+  }
+}
