@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct Mac拍照软件App: App {
+struct CameraApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

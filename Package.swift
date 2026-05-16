@@ -3,14 +3,14 @@
 import PackageDescription
 
 let package = Package(
-    name: "Mac拍照软件",
+    name: "Camera",
     platforms: [
         .macOS(.v14)
     ],
     targets: [
         .executableTarget(
-            name: "Mac拍照软件",
-            path: "Sources/Mac拍照软件",
+            name: "Camera",
+            path: "Sources/Camera",
             resources: [
                 .process("Assets.xcassets"),
                 .process("Info.plist")
